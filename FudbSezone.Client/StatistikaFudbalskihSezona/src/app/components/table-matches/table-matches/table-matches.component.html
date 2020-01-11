@@ -1,0 +1,21 @@
+<span>Prikaz svih mečeva</span>
+<div class="tableOfTeams">
+    <table class="tableOfTeams col-lg-12 col-md-12 col-xs-12">
+        <thead class="myth">
+            <tr class="mytr">
+                <th>#</th>
+                <th>Naziv</th>
+                <th>Mjesto</th>
+                <th>Br. bodova</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="mytr" *ngFor="let list of listOfFootballMatches; let i = index">
+                <td>{{i+1}}.</td>
+                <td>{{list.idfootballMatch}}</td>
+                <td>{{list.idfootballTeam}}</td>
+                <td>{{list.idmatch}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

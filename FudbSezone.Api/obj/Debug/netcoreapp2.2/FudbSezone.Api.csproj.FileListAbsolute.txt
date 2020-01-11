@@ -1,0 +1,17 @@
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\bin\Debug\netcoreapp2.2\FudbSezone.Api.deps.json
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\bin\Debug\netcoreapp2.2\FudbSezone.Api.runtimeconfig.json
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\bin\Debug\netcoreapp2.2\FudbSezone.Api.runtimeconfig.dev.json
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\bin\Debug\netcoreapp2.2\FudbSezone.Api.dll
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\bin\Debug\netcoreapp2.2\FudbSezone.Api.pdb
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\bin\Debug\netcoreapp2.2\FudbSezone.Domain.dll
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\bin\Debug\netcoreapp2.2\FudbSezone.Domain.pdb
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.csprojAssemblyReference.cache
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.csproj.CoreCompileInputs.cache
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.RazorAssemblyInfo.cache
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.RazorAssemblyInfo.cs
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.AssemblyInfoInputs.cache
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.AssemblyInfo.cs
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.RazorTargetAssemblyInfo.cache
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.csproj.CopyComplete
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.dll
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Api\obj\Debug\netcoreapp2.2\FudbSezone.Api.pdb

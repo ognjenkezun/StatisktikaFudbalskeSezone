@@ -1,0 +1,38 @@
+.inlineBlockDivs {
+    display: inline-block;
+}
+
+.textCnter {
+    text-align: center;
+}
+
+.blockDivs {
+    display: block;
+}
+
+.divForButtonAddSeason {
+    margin-left: 10px;
+}
+
+tr, th {
+    width: 150px;
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+}
+
+.componentSeason {
+    padding-top: 10px;
+}
+
+.paddingForm {
+    padding: 15px;
+}
+
+.paddingFormElement {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.paddingKendoDropDown {
+    padding-right: 15px;
+}

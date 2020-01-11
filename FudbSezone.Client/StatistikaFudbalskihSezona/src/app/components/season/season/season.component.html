@@ -1,0 +1,22 @@
+<div class="componentSeason col-lg-12 col-md-12 col-xs-12">
+    <div class="inlineBlockDivs paddingKendoDropDown">
+        <label class="blockDivs">Izaberite sezonu</label>
+        <kendo-dropdownlist 
+                [data]="listOfYearsOfSeason">
+        </kendo-dropdownlist>
+    </div>
+    <div class="inlineBlockDivs">
+        <label class="blockDivs">Izaberite tim</label>
+        <kendo-dropdownlist 
+                [data]="listOfFootballTeams">
+        </kendo-dropdownlist>
+    </div>
+</div>
+<form class="form paddingForm">
+    <label class="paddingFormElement" for="godinaSezone1">Unesite novu sezonu</label>
+    <input required type="text" name="godinaSezone" class="form-control paddingFormElement col-xs-12 col-lg-3" id="godinaSezone1" placeholder="2019/2020">
+    <button type="submit" name="btnAddSeason" class="btn btn-primary paddingFormElement">Dodaj sezonu</button>
+</form>
+<div *ngIf="isSeasonSelected">
+    <app-table></app-table>
+</div>

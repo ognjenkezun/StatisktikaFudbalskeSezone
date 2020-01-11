@@ -1,0 +1,33 @@
+<div class="inlineBlockDivs paddingMatchDiv container">
+    <label class="col-lg-12 col-xs-6" for="showAllFootballMatches1">Prikaži sve mečeve</label>
+    <input class="col-xs-2" type="checkbox" id="showAllFootballMatches1">
+    <form>
+        <div>
+            <div class="inlineBlockDivs paddingBottomFormElemnts">
+                <label class="blockDivs">Izaberite domaći klub</label>
+                <kendo-dropdownlist [data]="listOfFootballTeams">
+                </kendo-dropdownlist>
+            </div>
+            <div class="inlineBlockDivs paddingBottomFormElemnts">
+                <label for="brojGolovaDomacina1" class="blockDivs textAlignCenter">Broj golova</label>
+                <input required id="brojGolovaDomacina1" kendoTextBox name="txtNumberOfGoalsHomeTeam" class="inlineBlockDivs inputsStyle"/>
+            </div>
+        </div>
+        <div>
+            <div class="inlineBlockDivs paddingBottomFormElemnts">
+                <label class="blockDivs">Izaberite gostujući klub</label>
+                <kendo-dropdownlist [data]="listOfFootballTeams">
+                </kendo-dropdownlist>
+            </div>
+            <div class="inlineBlockDivs paddingBottomFormElemnts">
+                <label for="brojGolovaGosta1" class="blockDivs textAlignCenter">Broj golova</label>
+                <input required id="brojGolovaGosta1" kendoTextBox name="txtNumberOfGoalsAwayTeam" class="inlineBlockDivs inputsStyle"/>
+            </div>
+        </div>
+        <div>
+            <button type="submit" name="btnAddSeason" class="btn btn-primary btn-sm">Dodaj utakmicu</button>
+        </div>
+    </form>
+</div>
+<app-table></app-table>
+<app-table-matches *ngIf="showAllMatches"></app-table-matches>

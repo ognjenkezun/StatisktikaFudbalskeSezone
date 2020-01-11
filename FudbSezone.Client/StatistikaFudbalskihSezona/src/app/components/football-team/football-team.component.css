@@ -1,0 +1,31 @@
+.inlineBlockDivs {
+    display: inline-block;
+}
+
+.blockDivs {
+    display: block;
+}
+
+label {
+    float: left;
+    margin-bottom: 0;
+}
+
+.btnFloatLeft {
+    text-align: center;
+}
+
+.addingNewClub {
+    float: left;
+    margin: 10px;
+    padding: 5px;
+}
+
+#componentFootballTeams {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}

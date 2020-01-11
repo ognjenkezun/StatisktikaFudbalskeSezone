@@ -1,0 +1,30 @@
+.tableOfTeams { 
+    padding: 15px;
+}
+
+.myth {
+    background-color: gainsboro;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.mytr {
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+}
+.floatLeft {
+    float: left;
+}
+
+.blockElement {
+    display: block;
+}
+
+.inlineblockElement {
+    display: inline-block;
+}
+
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+}

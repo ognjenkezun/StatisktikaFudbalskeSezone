@@ -1,0 +1,9 @@
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\bin\Debug\netstandard2.0\FudbSezone.Domain.deps.json
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\bin\Debug\netstandard2.0\FudbSezone.Domain.dll
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\obj\Debug\netstandard2.0\FudbSezone.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\obj\Debug\netstandard2.0\FudbSezone.Domain.AssemblyInfoInputs.cache
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\obj\Debug\netstandard2.0\FudbSezone.Domain.AssemblyInfo.cs
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\bin\Debug\netstandard2.0\FudbSezone.Domain.pdb
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\obj\Debug\netstandard2.0\FudbSezone.Domain.dll
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\obj\Debug\netstandard2.0\FudbSezone.Domain.pdb
+C:\Users\Ognjen\Desktop\Singularity projekat - Statistika fudbalske sezone\StatisktikaFudbalskeSezone\FudbSezone.Domain\obj\Debug\netstandard2.0\FudbSezone.Domain.csprojAssemblyReference.cache

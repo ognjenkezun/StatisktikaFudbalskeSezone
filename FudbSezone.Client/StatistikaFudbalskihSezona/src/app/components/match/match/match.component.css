@@ -1,0 +1,34 @@
+.inlineBlockDivs {
+    display: inline-block;
+}
+
+.inputsStyle {
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.blockDivs {
+    display: block;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.marginMatchDiv {
+    margin: 15px;
+}
+
+.paddingMatchDiv {
+    padding: 15px;
+}
+
+.paddingBottomFormElemnts {
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+
+label {
+    padding: 0px;
+}

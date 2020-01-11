@@ -1,0 +1,147 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Api\\FudbSezone.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Api\\FudbSezone.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Api\\FudbSezone.Api.csproj",
+        "projectName": "FudbSezone.Api",
+        "projectPath": "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Api\\FudbSezone.Api.csproj",
+        "packagesPath": "C:\\Users\\Ognjen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ognjen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Domain\\FudbSezone.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Domain\\FudbSezone.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Domain\\FudbSezone.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Domain\\FudbSezone.Domain.csproj",
+        "projectName": "FudbSezone.Domain",
+        "projectPath": "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Domain\\FudbSezone.Domain.csproj",
+        "packagesPath": "C:\\Users\\Ognjen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ognjen\\Desktop\\Singularity projekat - Statistika fudbalske sezone\\StatisktikaFudbalskeSezone\\FudbSezone.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ognjen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.Platforms": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
