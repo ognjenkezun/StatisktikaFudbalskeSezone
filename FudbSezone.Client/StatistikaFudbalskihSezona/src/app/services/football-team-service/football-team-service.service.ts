@@ -17,6 +17,11 @@ export class FootballTeamServiceService {
     return this._httpClient.get<FootballTeam[]>(`${this.apiURL}FootballTeam/`);
   }
 
+  public getAllFootballTeamsBySeason(id: number): Observable<FootballTeam[]>
+  {
+    return this._httpClient.get<FootballTeam[]>(`${this.apiURL}FootballTeam/TableBySeason/${id}`);
+  }
+
   public returnFootballTeamWithID(id: number): Observable<FootballTeam>
   {
     return this._httpClient.get<FootballTeam>(`${this.apiURL}FootballTeam/${id}`);
@@ -32,8 +37,8 @@ export class FootballTeamServiceService {
     return this._httpClient.post<FootballTeam>(`${this.apiURL}FootballTeam/`, footballTeam);
   }
 
-  public updateFootballTeam(footballTeam: FootballTeam)
+  public updateFootballTeam(footballTeam: FootballTeam, id: number)
   {
-    return this._httpClient.put(`${this.apiURL}FootballTeam/`, footballTeam);
+    return this._httpClient.put(`${this.apiURL}FootballTeam/${id}`, footballTeam);
   }
 }

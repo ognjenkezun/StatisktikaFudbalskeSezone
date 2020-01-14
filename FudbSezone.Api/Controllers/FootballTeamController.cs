@@ -27,6 +27,36 @@ namespace FudbSezone.Api.Controllers
             return await _context.FootballTeam.ToListAsync();
         }
 
+        // GET: api/FootballTeam/TableBySeason/5
+        [HttpGet("TableBySeason/{idseason}")]
+        public ActionResult<IEnumerable<FootballTeam>> GetTableBySeason(int idseason)
+        {
+            var footballTeam = _context.FootballTeam.ToList();
+            var resultList = new List<FootballTeam>();
+
+            var seasonOfFootballTeam = _context.SeasonOfFootballTeam
+                .Where(x => x.Idseason == idseason)
+                .Select(y => y.IdfootballTeam)
+                .ToList();
+
+            var filteredResult = footballTeam.Where(x => seasonOfFootballTeam.Contains(x.IdfootballTeam)).ToList();
+
+            filteredResult.ForEach(fteam => 
+            {
+                var result = new FootballTeam()
+                {
+                    IdfootballTeam = fteam.IdfootballTeam,
+                    Name = fteam.Name,
+                    Location = fteam.Location,
+                    NumberOfPoints = fteam.NumberOfPoints
+                };
+
+                resultList.Add(result);
+            });
+
+            return resultList;
+        }
+
         // GET: api/FootballTeam/5
         [HttpGet("{id}")]
         public async Task<ActionResult<FootballTeam>> GetFootballTeam(int id)

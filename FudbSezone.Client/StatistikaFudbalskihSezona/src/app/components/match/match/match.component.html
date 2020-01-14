@@ -1,33 +1,119 @@
-<div class="inlineBlockDivs paddingMatchDiv container">
-    <label class="col-lg-12 col-xs-6" for="showAllFootballMatches1">Prikaži sve mečeve</label>
-    <input class="col-xs-2" type="checkbox" id="showAllFootballMatches1">
-    <form>
+<div class="inline-block-divs padding-match-div">
+    <div class="block-divs">
+        <table>
+            <tr>
+                <td>
+                    <label for="showAllFootballMatches1">Prikaži tabelu</label>
+                </td>
+                <td>
+                    <input class="margin-left-checkbox" 
+                           type="checkbox" 
+                           id="showAllFootballMatches1" 
+                           [(ngModel)]="showTableOfTeams">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="showAllMatches1">Prikaži sve mečeve</label>
+                </td>
+                <td>
+                    <input class="margin-left-checkbox" 
+                           type="checkbox"                             
+                           id="showAllMatches1" 
+                           [(ngModel)]="showTableOfMatches">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <form class="form" (ngSubmit)="addMatch();">
         <div>
-            <div class="inlineBlockDivs paddingBottomFormElemnts">
-                <label class="blockDivs">Izaberite domaći klub</label>
-                <kendo-dropdownlist [data]="listOfFootballTeams">
+            <div class="inline-block-divs padding-bottom-form-elemnts">
+                <kendo-dropdownlist [data]="listOfHomeFootballTeams" 
+                                    [filterable]="true"
+                                    [(ngModel)]="selectedHomeTeam"
+                                    [textField]="homeTeam"
+                                    [valueField]="idfootballTeam"
+                                    (valueChange)="onHomeTeamValueChange()"
+                                    name="homeTeam">
                 </kendo-dropdownlist>
             </div>
-            <div class="inlineBlockDivs paddingBottomFormElemnts">
-                <label for="brojGolovaDomacina1" class="blockDivs textAlignCenter">Broj golova</label>
-                <input required id="brojGolovaDomacina1" kendoTextBox name="txtNumberOfGoalsHomeTeam" class="inlineBlockDivs inputsStyle"/>
+            <div class="inline-block-divs padding-bottom-form-elemnts">
+                <input required type="text" 
+                        [(ngModel)]="match.numberOfGoalsHomeTeam" 
+                        name="numberOfGoalsHomeTeam" 
+                        class="form-control input-style inline-block-divs"
+                        placeholder="Broj golova domaćina">
             </div>
         </div>
         <div>
-            <div class="inlineBlockDivs paddingBottomFormElemnts">
-                <label class="blockDivs">Izaberite gostujući klub</label>
-                <kendo-dropdownlist [data]="listOfFootballTeams">
+            <div class="inline-block-divs padding-bottom-form-elemnts">
+                <kendo-dropdownlist [data]="listOfAwayFootballTeams" 
+                                    [filterable]="true"
+                                    [(ngModel)]="selectedAwayTeam"
+                                    [textField]="awayTeam"
+                                    [valueField]="idfootballTeam"
+                                    (valueChange)="onAwayTeamValueChange()"
+                                    name="awayTeam">
                 </kendo-dropdownlist>
             </div>
-            <div class="inlineBlockDivs paddingBottomFormElemnts">
-                <label for="brojGolovaGosta1" class="blockDivs textAlignCenter">Broj golova</label>
-                <input required id="brojGolovaGosta1" kendoTextBox name="txtNumberOfGoalsAwayTeam" class="inlineBlockDivs inputsStyle"/>
+            <div class="inline-block-divs padding-bottom-form-elemnts">
+                <input required type="text" 
+                       [(ngModel)]="match.numberOfGoalsAwayTeam" 
+                       name="numberOfGoalsAwayTeam" 
+                       class="form-control input-style inline-block-divs"
+                       placeholder="Broj golova gosta">
             </div>
         </div>
         <div>
-            <button type="submit" name="btnAddSeason" class="btn btn-primary btn-sm">Dodaj utakmicu</button>
+            <button type="submit" 
+                    name="btnAddSeason"                   
+                    class="btn btn-primary btn-add-match-width">
+                Dodaj utakmicu
+            </button>
         </div>
     </form>
 </div>
-<app-table></app-table>
-<app-table-matches *ngIf="showAllMatches"></app-table-matches>
+
+<div *ngIf="showTableOfTeams" class="table-of-teams">
+    <span>Tablica postojećih timova</span>
+    <table class="table-of-teams col-lg-12 col-md-12 col-xs-12">
+        <thead class="custom-th">
+            <tr class="custom-tr">
+                <th>#</th>
+                <th>Naziv</th>
+                <th>Mjesto</th>
+                <th>Br. bodova</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="custom-tr" *ngFor="let item of listOfAllFootballTeams; let i = index">
+                <td>{{i + 1}}.</td>
+                <td>{{item.name}}</td>
+                <td>{{item.location}}</td>
+                <td>{{item.numberOfPoints}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="showTableOfMatches" class="table-of-teams">
+    <span>Prikaz svih mečeva</span>
+    <table class="table-of-teams col-lg-12 col-md-12 col-xs-12">
+        <thead class="custom-th">
+            <tr class="custom-tr">
+                <th>#</th>
+                <th>Domaći tim</th>
+                <th>Gostujući tim</th>
+                <th>Rezultat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="custom-tr" *ngFor="let item of listOfAllMatches, let i = index">
+                <td>{{i+1}}.</td>
+                <td>{{item.homeTeam}}</td>
+                <td>{{item.awayTeam}}</td>
+                <td>{{item.resultOfMatch}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

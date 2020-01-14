@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FootballTeam } from 'src/app/models/FootballTeam';
 import { FootballTeamServiceService } from 'src/app/services/football-team-service/football-team-service.service';
+import { Season } from 'src/app/models/Season';
 
 @Component({
   selector: 'app-table',
@@ -9,9 +10,14 @@ import { FootballTeamServiceService } from 'src/app/services/football-team-servi
 })
 export class TableComponent implements OnInit {
 
+  @Input() childSelectedSeason = {} as Season;
+
   public listOfFootballTeams: FootballTeam[] = [];
 
-  constructor(private _footballTeamService: FootballTeamServiceService) { }
+  constructor(private _footballTeamService: FootballTeamServiceService)
+  { 
+
+  }
 
   ngOnInit() {
     this._footballTeamService.returnAllFootballTeams().subscribe(data => {

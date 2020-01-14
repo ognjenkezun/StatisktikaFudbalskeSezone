@@ -1,31 +1,38 @@
-.inlineBlockDivs {
-    display: inline-block;
-}
-
-.blockDivs {
+.block-divs {
     display: block;
 }
 
 label {
     float: left;
-    margin-bottom: 0;
+    padding-bottom: 15px;
+    margin: 0;
 }
 
-.btnFloatLeft {
-    text-align: center;
-}
-
-.addingNewClub {
-    float: left;
-    margin: 10px;
-    padding: 5px;
-}
-
-#componentFootballTeams {
-    padding-top: 10px;
+.component-football-teams {
+    padding-top: 15px;
     padding-bottom: 10px;
 }
 
 .form-group {
     margin-bottom: 10px;
+}
+
+.table-of-teams { 
+    padding: 15px;
+}
+
+.custom-th {
+    background-color: gainsboro;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.custom-tr {
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+}
+
+td {
+    padding-left: 5px;
+    padding-right: 5px;
 }

@@ -1,34 +1,66 @@
-.inlineBlockDivs {
+.inline-block-divs {
     display: inline-block;
 }
 
-.inputsStyle {
-    width: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
+.input-style {
+    padding-top: 1px;
 }
 
-.blockDivs {
+.block-divs {
     display: block;
 }
 
-.textAlignCenter {
+.text-align-center {
     text-align: center;
 }
 
-.marginMatchDiv {
-    margin: 15px;
+.margin-match-div {
+    margin: 10px;
 }
 
-.paddingMatchDiv {
+.padding-match-div {
     padding: 15px;
 }
 
-.paddingBottomFormElemnts {
+.padding-bottom-form-elemnts {
     padding-bottom: 15px;
     padding-right: 15px;
 }
 
 label {
     padding: 0px;
+    width: 100%;
+}
+
+.margin-left-checkbox{
+    margin-left: 20px;
+}
+
+kendo-dropdownlist {
+    height: 38px;
+    width: 200px;
+}
+
+.btn-add-match-width {
+    width: 200px;
+}
+
+.table-of-teams { 
+    padding: 15px;
+}
+
+.custom-th {
+    background-color: gainsboro;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.custom-tr {
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+}
+
+td {
+    padding-left: 5px;
+    padding-right: 5px;
 }

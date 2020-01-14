@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Season } from 'src/app/models/Season';
+import { SeasonDetails } from 'src/app/models/SeasonDetails';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,11 @@ export class SeasonServiceService {
   apiURL: string = 'http://localhost:5000/api/';
 
   constructor(private _httpClient: HttpClient) { }
+
+  public returnAllSeasonDetails(): Observable<SeasonDetails[]>
+  {
+      return this._httpClient.get<SeasonDetails[]>(`${this.apiURL}Season/SeasonDetails/`);
+  }
 
   public returnAllSeasons(): Observable<Season[]>
   {

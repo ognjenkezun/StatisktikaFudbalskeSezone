@@ -1,19 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary custom-sticky-navbar">
     <div class="container">
-        <a class="navbar-brand" routerLink="/sezona" href="#">Rezultati</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" [routerLink]="'/sezona'">Rezultati</a>
+        <button class="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarResponsive" 
+                aria-controls="navbarResponsive" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/sezona" href="#">Sezone</a>
+                    <a class="nav-link" [routerLink]="'/sezona'">Sezone</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/utakmica" href="#">Utakmice</a>
+                    <a class="nav-link" [routerLink]="'/utakmica'">Utakmice</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/fudbalskiKlubovi" href="#">Fudbalski klubovi</a>
+                    <a class="nav-link" [routerLink]="'/fudbalskiKlubovi'">Fudbalski klubovi</a>
                 </li>
             </ul>
         </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FootballMatch } from 'src/app/models/FootballMatch';
-import { FootballMatchServiceService } from 'src/app/services/football-match-service/football-match-service.service';
+import { MatchServiceService } from 'src/app/services/match-service/match-service.service';
+import { Match } from 'src/app/models/Match';
 
 @Component({
   selector: 'app-table-matches',
@@ -9,13 +9,13 @@ import { FootballMatchServiceService } from 'src/app/services/football-match-ser
 })
 export class TableMatchesComponent implements OnInit {
 
-  public listOfFootballMatches: FootballMatch[] = [];
+  public listOfMatches: Match[] = [];
 
-  constructor(private _footballMatchServiceService: FootballMatchServiceService) { }
+  constructor(private _atchServiceService: MatchServiceService) { }
 
   ngOnInit() {
-    this._footballMatchServiceService.returnAllFootballMatches().subscribe(data => {
-      this.listOfFootballMatches = data;
+    this._atchServiceService.returnAllMatches().subscribe(data => {
+      this.listOfMatches = data;
     });
   }
 }

@@ -17,6 +17,8 @@ import { TableComponent } from './components/table/table/table.component';
 import { SeasonComponent } from './components/season/season/season.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableMatchesComponent } from './components/table-matches/table-matches/table-matches.component';
+import { FormsModule } from '@angular/forms';
+import { TableSeasonDetailsComponent } from './components/table-season-details/table-season-details/table-season-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { TableMatchesComponent } from './components/table-matches/table-matches/
     MatchComponent,
     TableComponent,
     SeasonComponent,
-    TableMatchesComponent
+    TableMatchesComponent,
+    TableSeasonDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { TableMatchesComponent } from './components/table-matches/table-matches/
     ButtonsModule,
     LabelModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

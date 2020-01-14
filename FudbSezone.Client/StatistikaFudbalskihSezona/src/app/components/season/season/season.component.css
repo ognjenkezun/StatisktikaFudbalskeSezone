@@ -1,38 +1,61 @@
-.inlineBlockDivs {
+.inline-block-divs {
     display: inline-block;
 }
 
-.textCnter {
-    text-align: center;
-}
-
-.blockDivs {
+.block-divs {
     display: block;
 }
 
-.divForButtonAddSeason {
+.div-for-button-add-season {
     margin-left: 10px;
 }
 
-tr, th {
-    width: 150px;
-    text-align: center;
-    border-bottom: 2px solid lightgray;
+.custom-td {
+    padding-left: 20px;
 }
 
-.componentSeason {
-    padding-top: 10px;
+.component-season {
+    padding-top: 15px;
 }
 
-.paddingForm {
-    padding: 15px;
+.padding-form {
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.paddingFormElement {
+.custom-label {
+    padding: 0px;
+    width: 100%;
+}
+
+.padding-form-element {
     margin-right: 15px;
     margin-bottom: 15px;
 }
 
-.paddingKendoDropDown {
-    padding-right: 15px;
+kendo-dropdownlist {
+    height: 38px;
+    width: 270px;
+    margin-left: 15px;
+}
+
+.custom-th {
+    background-color: gainsboro;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.custom-tr {
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+}
+
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.table-of-teams { 
+    margin: 15px;
 }

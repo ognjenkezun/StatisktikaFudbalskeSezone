@@ -1,14 +1,47 @@
-<div id="componentFootballTeams" class="col-lg-3 col-md-6 col-xs-12">
-    <form onsubmit="">
+<div class="component-football-teams col-lg-3 col-md-6 col-xs-12">
+    <form action="" (ngSubmit)="addNewFootballTeam();">
         <div class="form-group">
             <label for="nameOfFootballTeam1">Naziv fudbalskog tima</label>
-            <input required type="text" name="nameOfFootbalTeam" class="form-control" id="nameOfFootballTeam1" placeholder="Real Madrid">
+            <input required type="text" 
+                    [(ngModel)]="footballTeam.name" 
+                    name="footballTeamName" 
+                    class="form-control" 
+                    id="nameOfFootballTeam1" 
+                    placeholder="Real Madrid">
         </div>
         <div class="form-group">
             <label for="clubLocation1">Mjesto</label>
-            <input required type="text" name="clubLocation" class="form-control" id="clubLocation1" placeholder="Madrid">
+            <input required 
+                    type="text" 
+                    [(ngModel)]="footballTeam.location" 
+                    name="footballTeamLocation" 
+                    class="form-control" 
+                    id="clubLocation1" 
+                    placeholder="Madrid">
         </div>
-        <button type="submit" name="btnAddFootballTeam" class="btn btn-primary">Dodaj tim</button>
+        <button type="submit"
+                name="btnAddFootballTeam"
+                class="btn btn-primary col-lg-12 col-md-12 col-xs-12">Dodaj tim</button>
     </form>
 </div>
-<app-table class="blockDivs"></app-table>
+<div class="table-of-teams">
+    <span>Tablica postojećih timova</span>
+    <table class="table-of-teams col-lg-12 col-md-12 col-xs-12">
+        <thead class="custom-th">
+            <tr class="custom-tr">
+                <th>#</th>
+                <th>Naziv</th>
+                <th>Mjesto</th>
+                <th>Br. bodova</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="custom-tr" *ngFor="let item of listOfFootballTeams; let i = index">
+                <td>{{i + 1}}.</td>
+                <td>{{item.name}}</td>
+                <td>{{item.location}}</td>
+                <td>{{item.numberOfPoints}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

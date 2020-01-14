@@ -12,22 +12,80 @@ import { FootballTeamServiceService } from 'src/app/services/football-team-servi
 export class SeasonComponent implements OnInit {
 
   public listOfYearsOfSeason: string[] = [];
-  public listOfFootballTeams: string[] = [];
+  public listOfFootballTeams: FootballTeam[] = [];
+  public listOfNameFootballTeams: string[] = [];
+  public selectedNameOfFootballTeams: string[] = [];
+  public listOfAllSeasons: Season[] = [];
+  public selectedSeason = {} as Season;
+  public season = {} as Season;
+  public defaultSelectedSeasonID: number;
   public isSeasonSelected: boolean = true;
+  public isCheckedFootballTeam: boolean = false;
 
-  constructor(private _seasonService: SeasonServiceService, private _footballTeamService: FootballTeamServiceService) { }
+  constructor(private _seasonService: SeasonServiceService,
+              private _footballTeamService: FootballTeamServiceService) 
+  {
+
+  }
 
   ngOnInit() {
+
+    this.loadAllSeasons();
+    this.loadAllFootballTeams();
+    this.loadAllSeasonDetails();
+  }
+
+  public loadAllSeasons(): void {
     this._seasonService.returnAllSeasons().subscribe(data => {
+      this.listOfAllSeasons = data;
+      console.log(this.listOfAllSeasons);
       data.forEach(item => {
         this.listOfYearsOfSeason.push(item.yearOfSeason);
+        this.listOfYearsOfSeason.sort((a, b) => (a > b) ? 1 : -1);
+      });
+    });
+  }
+
+  public loadAllFootballTeams(): void {
+    this._footballTeamService.returnAllFootballTeams().subscribe(data => {
+          data.forEach(item => {
+            this.listOfNameFootballTeams.push(item.name);
+          });
+        });
+  }
+
+  public loadAllSeasonDetails(): void {
+    this._seasonService.returnAllSeasonDetails().subscribe(data => {
+      console.log(data);
+    });
+  }
+
+  public addNewSeason(): void {
+    //provjeriti u bazi da li vec postoji ta sezona
+    this._seasonService.addSeason(this.season).subscribe(data => {
+      this.listOfYearsOfSeason = [];
+      this._seasonService.returnAllSeasons().subscribe(data => {
+        data.forEach(item => {
+          this.listOfYearsOfSeason.push(item.yearOfSeason);
+        });
       });
     });
 
-    this._footballTeamService.returnAllFootballTeams().subscribe(data => {
-      data.forEach(item => {
-        this.listOfFootballTeams.push(item.name);
-      })
+    this.season.yearOfSeason = "";
+  }
+
+  public onSelectSeason(): void {
+    //Idem u tabelu sezonaFudbalskog tima i onda izlistam koji su igrali te sezone
+    //i poredam ih po broju bodova
+    this.listOfAllSeasons.forEach(item => {
+      if(this.selectedSeason.yearOfSeason == item.yearOfSeason){
+        this.selectedSeason.idseason = item.idseason;
+      }
     });
+    this._footballTeamService.getAllFootballTeamsBySeason(this.selectedSeason.idseason).subscribe(data => {
+      this.listOfFootballTeams = data;
+      this.listOfFootballTeams.sort((a, b) => (a.numberOfPoints > b.numberOfPoints) ? -1 : 1);
+    })
+    console.log(this.selectedSeason);
   }
 }

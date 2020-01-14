@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FudbSezone.Domain.Models;
+using FudbSezone.Domain.CustomModels;
 
 namespace FudbSezone.Api.Controllers
 {
@@ -25,6 +26,41 @@ namespace FudbSezone.Api.Controllers
         public async Task<ActionResult<IEnumerable<Season>>> GetSeason()
         {
             return await _context.Season.ToListAsync();
+        }
+
+        // GET: api/Season/SeasonDetails
+        [HttpGet("SeasonDetails/")]
+        public ActionResult<IEnumerable<SeasonDetails>> GetSeasonDetails()
+        {
+            var resultList = new List<SeasonDetails>();
+
+            var season = _context.Season.ToList();
+
+            season.ForEach(seas =>
+            {
+                var seasonOfFootballTeam = _context.SeasonOfFootballTeam.Where(x => x.Idseason == seas.Idseason)
+                    .ToList().Select(y => y.IdfootballTeam);
+
+                var footballTeam = _context.FootballTeam.Where(x => seasonOfFootballTeam.Contains(x.IdfootballTeam)).ToList();
+
+                footballTeam.ForEach(team =>
+                {
+                    var res = new SeasonDetails
+                    {
+                        Idseason = seas.Idseason,
+                        YearOfSeason = seas.YearOfSeason,
+                        IdfootballTeam = team.IdfootballTeam,
+                        Name = team.Name,
+                        Location = team.Location,
+                        NumberOfPoints = team.NumberOfPoints
+                    };
+
+                    resultList.Add(res);
+                });
+            });
+
+            return resultList;
+
         }
 
         // GET: api/Season/5

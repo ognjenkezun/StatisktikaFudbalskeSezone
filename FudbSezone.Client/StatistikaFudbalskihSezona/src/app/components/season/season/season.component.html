@@ -1,22 +1,64 @@
-<div class="componentSeason col-lg-12 col-md-12 col-xs-12">
-    <div class="inlineBlockDivs paddingKendoDropDown">
-        <label class="blockDivs">Izaberite sezonu</label>
-        <kendo-dropdownlist 
-                [data]="listOfYearsOfSeason">
-        </kendo-dropdownlist>
-    </div>
-    <div class="inlineBlockDivs">
-        <label class="blockDivs">Izaberite tim</label>
-        <kendo-dropdownlist 
-                [data]="listOfFootballTeams">
+<div class="component-season">
+    <div>
+        <label class="block-divs col-xs-12 col-lg-3">Izaberite sezonu</label>
+        <kendo-dropdownlist [data]="listOfYearsOfSeason"
+                            [filterable]="true"
+                            [(ngModel)]="selectedSeason.yearOfSeason"
+                            [textField]="yearOfSeason"
+                            [valueField]="idseason"
+                            (valueChange)="onSelectSeason()"
+                            name="yearOfSeason"
+                            class="padding-form-element">
         </kendo-dropdownlist>
     </div>
 </div>
-<form class="form paddingForm">
-    <label class="paddingFormElement" for="godinaSezone1">Unesite novu sezonu</label>
-    <input required type="text" name="godinaSezone" class="form-control paddingFormElement col-xs-12 col-lg-3" id="godinaSezone1" placeholder="2019/2020">
-    <button type="submit" name="btnAddSeason" class="btn btn-primary paddingFormElement">Dodaj sezonu</button>
+<form class="form padding-form" (ngSubmit)="addNewSeason();">
+    <label class="padding-form-element" for="godinaSezone1">Unesite novu sezonu</label>
+    <input required type="text" 
+           [(ngModel)]="season.yearOfSeason" 
+           name="godinaSezone" 
+           class="form-control col-lg-3 col-md-6 col-xs-12" 
+           id="godinaSezone1" 
+           placeholder="2019/2020">
+    <div>
+        <label class="component-season">Dodaj timove u sezonu</label>
+        <table>
+            <tr *ngFor="let item of listOfNameFootballTeams">
+                <td>
+                    <label class="custom-label" for="{{item}}1">{{item}}</label>
+                </td>
+                <td class="custom-td">
+                    <input class="margin-left-checkbox" 
+                           type="checkbox"
+                           id="{{item}}1">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button type="submit" 
+            name="btnAddSeason"               
+            class="btn btn-primary col-lg-3 col-md-6 col-xs-12">
+        Dodaj sezonu
+    </button>
 </form>
-<div *ngIf="isSeasonSelected">
-    <app-table></app-table>
+<div class="component-season table-of-teams">
+    <span>Tablica sezone {{selectedSeason.yearOfSeason}}</span>
+    <table class="col-lg-12 col-md-12 col-xs-12">
+        <thead class="custom-th">
+            <tr class="custom-tr">
+                <th>Pozicija</th>
+                <th>Naziv</th>
+                <th>Mjesto</th>
+                <th>Br. bodova</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="custom-tr" *ngFor="let item of listOfFootballTeams; let i = index">
+                <td>{{i+1}}.</td>
+                <td>{{item.name}}</td>
+                <td>{{item.location}}</td>
+                <td>{{item.numberOfPoints}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
