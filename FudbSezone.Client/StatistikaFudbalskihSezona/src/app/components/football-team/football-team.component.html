@@ -1,6 +1,18 @@
 <div class="component-football-teams col-lg-3 col-md-6 col-xs-12">
     <form action="" (ngSubmit)="addNewFootballTeam();">
         <div class="form-group">
+            <label>Izaberite sezonu</label>
+            <kendo-dropdownlist [data]="listOfYearsOfSeason"
+                                [filterable]="true"
+                                [(ngModel)]="selectedSeason.yearOfSeason"
+                                [textField]="yearOfSeason"
+                                [valueField]="idseason"
+                                (valueChange)="onSelectSeason()"
+                                name="yearOfSeason"
+                                class="padding-form-element form-group block-divs">
+            </kendo-dropdownlist>
+        </div>
+        <div class="form-group">
             <label for="nameOfFootballTeam1">Naziv fudbalskog tima</label>
             <input required type="text" 
                     [(ngModel)]="footballTeam.name" 

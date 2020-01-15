@@ -21,23 +21,10 @@
            id="godinaSezone1" 
            placeholder="2019/2020">
     <div>
-        <label class="component-season">Dodaj timove u sezonu</label>
-        <table>
-            <tr *ngFor="let item of listOfNameFootballTeams">
-                <td>
-                    <label class="custom-label" for="{{item}}1">{{item}}</label>
-                </td>
-                <td class="custom-td">
-                    <input class="margin-left-checkbox" 
-                           type="checkbox"
-                           id="{{item}}1">
-                </td>
-            </tr>
-        </table>
     </div>
     <button type="submit" 
             name="btnAddSeason"               
-            class="btn btn-primary col-lg-3 col-md-6 col-xs-12">
+            class="component-season btn btn-primary col-lg-3 col-md-6 col-xs-12">
         Dodaj sezonu
     </button>
 </form>

@@ -13,7 +13,7 @@ import { Match } from 'src/app/models/Match';
 })
 export class MatchComponent implements OnInit {
 
-    public listOfFootballMatches = [new FootballMatch()];
+    public listOfFootballMatches: FootballMatch[] = [];
     public footballMatch = {} as FootballMatch;
     public match = {} as Match;
     public listOfFootballTeams = {} as string[];
@@ -29,6 +29,7 @@ export class MatchComponent implements OnInit {
     public selectedAwayTeamID: number;
     public selectedHomeTeam: string;
     public selectedAwayTeam: string;
+    public addedMatchID: number = null;
     public showTableOfMatches: boolean = false;
     public showTableOfTeams: boolean = false;
 
@@ -152,13 +153,14 @@ export class MatchComponent implements OnInit {
                     this.refreshListOfAllMatches();
                 });
             });
+
             this.addMatchInTable();
         }
     }
 
     public onHomeTeamValueChange(): void {
         this.listOfAllFootballTeams.forEach(item => {
-            if(this.selectedHomeTeam == item.name)
+            if(this.selectedHomeTeam === item.name)
             {
                 this.selectedHomeTeamID = item.idfootballTeam;
             }
@@ -167,7 +169,7 @@ export class MatchComponent implements OnInit {
 
     public onAwayTeamValueChange(): void {
         this.listOfAllFootballTeams.forEach(item => {
-            if(this.selectedAwayTeam == item.name)
+            if(this.selectedAwayTeam === item.name)
             {
                 this.selectedAwayTeamID = item.idfootballTeam;
             }
